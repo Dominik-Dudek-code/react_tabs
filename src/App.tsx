@@ -19,7 +19,7 @@ export type Tab = {
 export const App: React.FC = () => {
   const [selectedTabId, setSelectedTabId] = useState(tabs[0].id);
 
-  const onTabSelected = (
+  const handleTabSelected = (
     tab: Tab,
     event: React.MouseEvent<HTMLAnchorElement>,
   ) => {
@@ -49,7 +49,7 @@ export const App: React.FC = () => {
                   tab={tab}
                   key={tab.id}
                   selectedTab={selectedTabId}
-                  onTabSelected={onTabSelected}
+                  onTabSelected={handleTabSelected}
                 />
               );
             })}
